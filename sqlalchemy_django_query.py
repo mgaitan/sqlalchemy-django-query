@@ -19,10 +19,10 @@
     license: BSD, see LICENSE for more details.
 """
 from sqlalchemy.orm import joinedload, joinedload_all
+from sqlalchemy.orm.base import _entity_descriptor
 from sqlalchemy.orm.query import Query
-from sqlalchemy.orm.util import _entity_descriptor
-from sqlalchemy.util import to_list
 from sqlalchemy.sql import operators, extract
+from sqlalchemy.util import to_list
 
 
 class DjangoQueryMixin(object):
@@ -83,7 +83,7 @@ class DjangoQueryMixin(object):
         joins_needed = []
         for idx, arg in enumerate(args):
             q = self
-            if not isinstance(arg, basestring):
+            if not isinstance(arg, str):
                 continue
             if arg[0] in '+-':
                 desc = arg[0] == '-'
@@ -114,7 +114,7 @@ class DjangoQueryMixin(object):
         negate_if = lambda expr: expr if not negate else ~expr
         column = None
 
-        for arg, value in kwargs.iteritems():
+        for arg, value in kwargs.items():
             for token in arg.split('__'):
                 if column is None:
                     column = _entity_descriptor(q._joinpoint_zero(), token)
