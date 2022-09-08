@@ -15,8 +15,8 @@ authors = [
     {name = "Mike Bayer"},
 ]
 maintainers = [
+    {name = "Martín Gaitán"}, 
     {name = "Artur Mruk"}, 
-    {name = "Martín Gaitán", email = "gaitan@gmail.com"}, 
 ]
 dependencies = [
     "SQLAlchemy<1.4",
