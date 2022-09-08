@@ -9,7 +9,7 @@ from sqlalchemy.orm.query import Query
 from sqlalchemy.sql import extract, operators
 from sqlalchemy.util import to_list
 
-__version__ = "0.2.0"
+__version__ = "0.2.1.1"
 
 
 class DjangoQueryMixin:

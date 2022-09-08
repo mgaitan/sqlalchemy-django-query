@@ -1,8 +1,7 @@
 # sqlalchemy-django-query
 
-![](https://github.com/Shiphero/shbin/actions/workflows/pytest.yml/badge.svg)
-![](https://github.com/Shiphero/shbin/actions/workflows/black.yml/badge.svg)
-
+[![tests](https://github.com/mgaitan/sqlalchemy-django-query/actions/workflows/pytest.yml/badge.svg)](https://github.com/mgaitan/sqlalchemy-django-query/actions/workflows/pytest.yml)
+[![black](https://github.com/mgaitan/sqlalchemy-django-query/actions/workflows/black.yml/badge.svg)](https://github.com/mgaitan/sqlalchemy-django-query/actions/workflows/black.yml)
 
 A module that implements a more Django like interface for SQLAlchemy
 (currently < 1.4) query objects. 
